@@ -37,15 +37,13 @@ def login_page(request):
 
                 user_dashboard_dets = user_dashboard.objects.get(user=user)
                 
-                if user_dashboard_dets.website_type == 'B':
-                    return redirect('webella:blog_dashboard')
+                # if user_dashboard_dets.website_type == 'B':
+                #     return redirect('webella:blog_dashboard')
                 
-                # routes to portofolio
-                elif user_dashboard_dets.website_type == 'P':
-                    return redirect('webella:portfolio_dashboard')
+                # # routes to portofolio
+                # elif user_dashboard_dets.website_type == 'P':
+                #     return redirect('webella:portfolio_dashboard')
                 
-            
-
                 return redirect('webella:dashboard')
 
         else:
